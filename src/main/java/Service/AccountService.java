@@ -22,7 +22,9 @@ public class AccountService {
     public Account addAccount(Account account) {
         String username = account.getUsername();
         String password = account.getPassword();
-        boolean validUsernameAndPassword = (username != null && username != "" && password.length() >= 4);
+        boolean validUsernameAndPassword = (username != null &&
+                                            username != "" &&
+                                            password.length() >= 4);
         boolean uniqueUsername = true;
 
         if (validUsernameAndPassword) {
